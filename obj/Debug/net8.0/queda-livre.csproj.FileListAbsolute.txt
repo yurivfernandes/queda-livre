@@ -1,0 +1,15 @@
+C:\Users\Yuri\Documents\projetos\queda-livre\bin\Debug\net8.0\queda-livre.exe
+C:\Users\Yuri\Documents\projetos\queda-livre\bin\Debug\net8.0\queda-livre.deps.json
+C:\Users\Yuri\Documents\projetos\queda-livre\bin\Debug\net8.0\queda-livre.runtimeconfig.json
+C:\Users\Yuri\Documents\projetos\queda-livre\bin\Debug\net8.0\queda-livre.dll
+C:\Users\Yuri\Documents\projetos\queda-livre\bin\Debug\net8.0\queda-livre.pdb
+C:\Users\Yuri\Documents\projetos\queda-livre\obj\Debug\net8.0\queda-livre.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yuri\Documents\projetos\queda-livre\obj\Debug\net8.0\queda-livre.AssemblyInfoInputs.cache
+C:\Users\Yuri\Documents\projetos\queda-livre\obj\Debug\net8.0\queda-livre.AssemblyInfo.cs
+C:\Users\Yuri\Documents\projetos\queda-livre\obj\Debug\net8.0\queda-livre.csproj.CoreCompileInputs.cache
+C:\Users\Yuri\Documents\projetos\queda-livre\obj\Debug\net8.0\queda-livre.sourcelink.json
+C:\Users\Yuri\Documents\projetos\queda-livre\obj\Debug\net8.0\queda-livre.dll
+C:\Users\Yuri\Documents\projetos\queda-livre\obj\Debug\net8.0\refint\queda-livre.dll
+C:\Users\Yuri\Documents\projetos\queda-livre\obj\Debug\net8.0\queda-livre.pdb
+C:\Users\Yuri\Documents\projetos\queda-livre\obj\Debug\net8.0\queda-livre.genruntimeconfig.cache
+C:\Users\Yuri\Documents\projetos\queda-livre\obj\Debug\net8.0\ref\queda-livre.dll
