@@ -9,13 +9,13 @@ namespace Queda_Livre
     {
         class Passageiro
         {
-            private Int64 cpf, telefone;
+            private string cpf, telefone;
             private string nome, endereco, horario;
             private int poltrona, voo;
             public Passageiro() //Construtor Para Iniciar as vari�veis
             {
-                cpf = 0;
-                telefone = 0;
+                cpf = "0";
+                telefone = "0";
                 nome = "Zerado";
                 endereco = "Zerado";
                 horario = "00:00";
@@ -23,7 +23,7 @@ namespace Queda_Livre
                 voo = 0;
             }// Fim do Construtor
             //Metodos para retornar os valotes
-            public Int64 OCPF()
+            public string OCPF()
             {
                 return (cpf);
             }
@@ -47,11 +47,11 @@ namespace Queda_Livre
             {
                 return (voo);
             }
-            public Int64 OTel()
+            public string OTel()
             {
                 return (telefone);
             } // Fim dos metodos para retornar os valores
-            public void CadastraCPF(Int32 c)
+            public void CadastraCPF(string c)
             {
                 cpf = c;
             }
@@ -75,7 +75,7 @@ namespace Queda_Livre
             {
                 voo = v;
             }
-            public void CadastraTel(Int64 tel)
+            public void CadastraTel(string tel)
             {
                 telefone = tel;
             }
@@ -88,7 +88,7 @@ namespace Queda_Livre
             Console.ForegroundColor = ConsoleColor.Black;
             Console.Clear();
             Console.Write("Informe o numero do CPF: ");
-            Padrao.CadastraCPF(Convert.ToInt32(Console.ReadLine()));
+            Padrao.CadastraCPF(Console.ReadLine());
             Console.Write("Informe o nome do passageiro: ");
             Padrao.CadastraNome(Console.ReadLine());
             Console.Write("Informe o endereço: ");
@@ -98,7 +98,7 @@ namespace Queda_Livre
             Console.Write("Informe o numero da poltrona: ");
             Padrao.CadastraPoltrona(Convert.ToInt32(Console.ReadLine()));
             Console.Write("Informe o numero do telefone: ");
-            Padrao.CadastraTel(Convert.ToInt32(Console.ReadLine()));
+            Padrao.CadastraTel(Console.ReadLine());
             voo.Add(Padrao);
             Console.ResetColor();
         }
@@ -117,7 +117,7 @@ namespace Queda_Livre
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("\n\n\n\n\n\n\n\n\n\n\t\t     Bem Vindo | Compania Aérea Queda Livre!\n\t\t\t\t Carregando...");
             Console.ResetColor();
-            Thread.Sleep(5000);
+            Thread.Sleep(1000);
             Console.Clear();
         }
         static void MenuPrincipal()
@@ -158,7 +158,7 @@ namespace Queda_Livre
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("\tDigite uma opcao: ");
             Console.ForegroundColor = ConsoleColor.Black;
-            Console.WriteLine("1-Para o Voo 1: \n2-Para Voo2: \n3-Para Voo 3: \n4-Para fila de espera: \nESC-Para voltar. ");
+            Console.WriteLine("1-Para o Vôo 1: \n2-Para Vôo 2: \n3-Para Vôo 3: \n4-Para fila de espera: \nESC-Para voltar. ");
             Console.ResetColor();
         }
 
@@ -185,11 +185,11 @@ namespace Queda_Livre
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("\tDigite uma opcao: ");
             Console.ForegroundColor = ConsoleColor.Black;
-            Console.WriteLine("1-Para o Voo 1: \n2-Para Voo2: \n3-Para Voo 3: \nESC-Para voltar. ");
+            Console.WriteLine("1-Para o Vôo 1: \n2-Para Vôo 2: \n3-Para Vôo 3: \nESC-Para voltar. ");
             Console.ResetColor();
         }
 
-        static void ProcurarCPF(List<Passageiro> Voo, Int64 numero)
+        static void ProcurarCPF(List<Passageiro> Voo, string numero)
         {
             Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Black;
@@ -254,7 +254,7 @@ namespace Queda_Livre
                 if (teclado.Key == ConsoleKey.Escape) // TESTANDO SE O USUARIO QUER SAIR DO PROGRAMA
                 {
                     Console.Clear();
-                    Console.WriteLine("\tSaindo do programa..............");
+                    Console.WriteLine("\t saindo do programa..............");
                     Console.ReadKey();
                     break;
                 }
@@ -302,13 +302,14 @@ namespace Queda_Livre
                     SubMenu3();
                     teclado = Console.ReadKey();
                     opcao = Convert.ToChar(teclado.KeyChar);
+                    string pesquisar;
                     if (opcao == '1')
                     {
                         Console.Clear();
                         Console.BackgroundColor = ConsoleColor.White;
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("\tDigite o numero do CPF a ser procurado");
-                        Int64 pesquisar = Int64.Parse(Console.ReadLine());
+                        pesquisar = Console.ReadLine();
                         ProcurarCPF(Voo1, pesquisar);
                         Console.ResetColor();
                     }
@@ -318,7 +319,7 @@ namespace Queda_Livre
                         Console.BackgroundColor = ConsoleColor.White;
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("\tDigite o numero do CPF a ser procurado");
-                        Int64 pesquisar = Int64.Parse(Console.ReadLine());
+                        pesquisar = Console.ReadLine();
                         ProcurarCPF(Voo2, pesquisar);
                         Console.ResetColor();
                     }
@@ -328,7 +329,7 @@ namespace Queda_Livre
                         Console.BackgroundColor = ConsoleColor.White;
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("\tDigite o numero do CPF a ser procurado");
-                        Int64 pesquisar = Int64.Parse(Console.ReadLine());
+                        pesquisar = Console.ReadLine();
                         ProcurarCPF(Voo3, pesquisar);
                         Console.ResetColor();
                     }
